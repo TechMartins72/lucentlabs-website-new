@@ -4,17 +4,27 @@ import Image from "next/image";
 import { links, socials } from "../utils/index";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import Link from "next/link";
-import React from "react";
 import { ModeType } from "../utils/types";
+import { useContext } from "react";
+import { ThemeContext, useTheme } from "../providers/ThemeProvider";
+import Button from "./Button";
 
 const Header = () => {
-  const [mode, setMode] = React.useState<ModeType>("dark");
+  const { isDark, toggleTheme } = useTheme();
 
   return (
-    <div className="h-24 flex justify-center items-center px-24 w-screen shadow-md border-b-2 border-[#066AFF]">
+    <div
+      className={`h-24 flex justify-center items-center px-24 w-screen shadow-md border-b-2 ${
+        isDark ? "border-blue-light" : "border-[#cdc6c7]"
+      } select-none`}
+    >
       <header className="flex justify-center items-center w-full gap-16">
         <Image
-          src="/lucentlab_vector_dark.png"
+          src={
+            isDark
+              ? "/lucentlab_vector_dark.png"
+              : "/lucentlab_vector_light.png"
+          }
           alt="lucentlabs-logo"
           width={230}
           height={27}
@@ -26,29 +36,25 @@ const Header = () => {
             </Link>
           ))}
         </ul>
-        <div className="relative flex items-center justify-around border-2 border-[#066AFF] rounded-xl h-12 w-16 bg-white text-black overflow-hidden cursor-pointer">
+        <div className="relative flex items-center justify-around border-2 border-blue-light rounded-xl h-12 w-16 bg-white text-black overflow-hidden cursor-pointer">
           <div
             className={`absolute w-1/2 h-full top-0 ${
-              mode === "dark" ? "left-0 rounded-r-md" : "right-0 rounded-l-md"
-            } border-2 border-[#066AFF] bg-[#0620A2] z-1`}
+              isDark ? "left-0 rounded-r-md" : "right-0 rounded-l-md"
+            } border-2 border-blue-light bg-blue-dark z-1`}
           ></div>
           <div className="absolute flex w-full h-full justify-around items-center z-2 text-lg">
             <span
-              onClick={() =>
-                setMode((prev) => (prev === "dark" ? "light" : "dark"))
-              }
+              onClick={() => toggleTheme()}
               className={`h-full w-full flex justify-center items-center ${
-                mode === "dark" && "text-white"
+                isDark ? "text-white" : "text-blue-dark"
               }`}
             >
               <MdDarkMode />
             </span>
             <span
-              onClick={() =>
-                setMode((prev) => (prev === "dark" ? "light" : "dark"))
-              }
+              onClick={() => toggleTheme()}
               className={`h-full w-full flex justify-center items-center ${
-                mode === "light" && "text-white"
+                !isDark ? "text-white" : "text-blue-dark"
               }`}
             >
               <MdLightMode />
@@ -61,7 +67,7 @@ const Header = () => {
               key={idx}
               className="p-0.5 bg-linear-to-r/srgb from-white to-transparent rounded-full"
             >
-              <span className="flex justify-center items-center p-3 bg-[#066AFF] text-white rounded-full cursor-pointer">
+              <span className="flex justify-center items-center p-3 bg-blue-light text-white rounded-full cursor-pointer">
                 <Link href={social.url} className="text-xl" target="_blank">
                   <social.icon />
                 </Link>
@@ -69,13 +75,13 @@ const Header = () => {
             </span>
           ))}
         </div>
-        <Link href="#" target="_blank">
-          <div className="rounded-bl-full rounded-tr-full bg-[#066AFF] py-0.5 px-1 bg-linear-to-r/srgb from-white to-transparent">
-            <div className=" rounded-bl-full rounded-tr-full bg-[#066AFF] px-10 py-2 font-semibold text-xl">
-              Contact Us
-            </div>
-          </div>
-        </Link>
+        <Button
+          value="Contact Us"
+          href="#"
+          bg="bg-blue-light"
+          outlineColor="bg-linear-to-r/srgb from-white to-transparent"
+          textColor="text-white"
+        />
       </header>
     </div>
   );
