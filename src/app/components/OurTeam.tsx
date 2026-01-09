@@ -1,11 +1,12 @@
 import React from "react";
 import Title from "./Title";
 import { useTheme } from "../providers/ThemeProvider";
+import ImageFrame from "./ImageFrame";
 
 const OurTeam = () => {
   const { isDark } = useTheme();
   return (
-    <section className="section bg-hero-bg">
+    <section id="team" className="section bg-hero-bg">
       <Title
         imageAlt="team_icon"
         imageUrl="/team.png"
@@ -13,6 +14,9 @@ const OurTeam = () => {
         title="Meet Our Team"
         textColor={`${isDark ? "text-blue-light" : "text-blue-dark"}`}
       />
+      <main>
+        <ImageFrame />
+      </main>
     </section>
   );
 };

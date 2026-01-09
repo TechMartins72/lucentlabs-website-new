@@ -8,13 +8,13 @@ const ProductsAndSolution = () => {
   const { isDark } = useTheme();
 
   return (
-    <section className="section bg-hero-bg">
+    <section id="services" className="section bg-hero-bg">
       <Image
         src={`${isDark ? "/herofaint.png" : "/herofaintlight.png"}`}
         alt="faint_background"
         height={25}
         width={350}
-        className="absolute top-1/2 -translate-y-1/2 left-0 rotate-y-180"
+        className="absolute top-1/2 -translate-y-1/2 left-0 rotate-y-18"
       />
       <Title
         imageAlt="solution_icon"

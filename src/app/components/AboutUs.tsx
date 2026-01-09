@@ -7,7 +7,7 @@ const AboutUs = () => {
   const { isDark } = useTheme();
 
   return (
-    <section className="section bg-background">
+    <section id="about" className="section bg-background">
       <Title
         imageAlt="questionmark_icon"
         imageUrl="/questionmark.png"

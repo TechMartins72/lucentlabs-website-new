@@ -7,7 +7,10 @@ const HeroSection = () => {
   const { isDark } = useTheme();
 
   return (
-    <div className="bg-hero-bg w-full py-18 px-24 flex justify-center items-center gap-32 relative text-center select-none">
+    <div
+      id="hero-section"
+      className="bg-hero-bg w-full pb-18 pt-42 px-24 flex justify-center items-center gap-32 relative text-center select-none"
+    >
       <Image
         src={`${isDark ? "/herofaint.png" : "/herofaintlight.png"}`}
         alt="faint_background"

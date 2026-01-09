@@ -27,3 +27,12 @@ export type ProductsAndSolutionsType = {
   imageUrl: string;
   imageAlt: string;
 };
+
+export type TeamDetails = {
+  name: string;
+  role: string;
+  imageUrl: string;
+  socials: string[];
+  skills: string[];
+  about: string;
+};

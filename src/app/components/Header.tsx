@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <div
-      className={`h-24 bg-background flex justify-center items-center px-24 w-full shadow-md border-b-2 ${
+      className={`fixed top-0 left-0 z-20 h-24 bg-background flex justify-center items-center px-24 w-full border-b-2 ${
         isDark ? "border-blue-light" : "border-[#cdc6c7]"
       } select-none`}
     >
@@ -29,7 +29,7 @@ const Header = () => {
           width={230}
           height={27}
         />
-        <ul className="flex flex-1 gap-10 justify-center items-center list-none italic">
+        <ul className="flex flex-1 gap-10 justify-center items-center list-none">
           {links.map((link, idx) => (
             <Link key={idx} href={link.url}>
               {link.title}

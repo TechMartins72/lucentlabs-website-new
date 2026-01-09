@@ -14,7 +14,7 @@ export default function Home() {
   const [isDark, setIsDark] = React.useState<boolean>(true);
 
   return (
-    <main className={`${isDark && "dark"}`}>
+    <main className={`${isDark && "dark"} relative`}>
       <Header />
       <HeroSection />
       <AboutUs />

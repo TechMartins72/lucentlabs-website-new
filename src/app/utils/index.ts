@@ -1,26 +1,32 @@
-import { aboutType, Links, ProductsAndSolutionsType, Socials } from "./types";
+import {
+  aboutType,
+  Links,
+  ProductsAndSolutionsType,
+  Socials,
+  TeamDetails,
+} from "./types";
 import { FaDiscord, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export const links: Links[] = [
   {
     title: "Home",
-    url: "",
+    url: "#hero-section",
   },
   {
     title: "About",
-    url: "",
+    url: "#about",
   },
   {
     title: "Services",
-    url: "",
+    url: "#services",
   },
   {
     title: "Our Team",
-    url: "",
+    url: "#team",
   },
   {
-    title: "Portfolio",
-    url: "",
+    title: "Get In Touch",
+    url: "#contact",
   },
 ];
 
@@ -106,4 +112,52 @@ export const services = [
   { title: "Services", url: "#" },
   { title: "Our Team", url: "#" },
   { title: "Our Works", url: "#" },
+];
+
+export const teamDetails: TeamDetails[] = [
+  {
+    name: "Lawal Musa Agah",
+    role: "Founder & Lead Architect",
+    imageUrl: "/person_one.png",
+    socials: [],
+    skills: ["Leadership", "Cardano", "Backend"],
+    about:
+      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+  },
+  {
+    name: "Samir Idris",
+    role: "Aiken Smart Contract & Full Stack Developer",
+    imageUrl: "/person_two.png",
+    socials: [],
+    skills: ["Aiken", "Cardano", "Compact", "Backend"],
+    about:
+      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+  },
+  {
+    name: "Elliot Lucky",
+    role: "Compact Smart Contract & Full Stack Developer",
+    imageUrl: "/person_three.png",
+    socials: [],
+    skills: ["Compact", "FullStack", "Rust"],
+    about:
+      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+  },
+  {
+    name: "Joseph Martins",
+    role: "Compact Smart Contract & Full Stack Developer",
+    imageUrl: "/person_one.png",
+    socials: [],
+    skills: ["Compact", "FullStack", "Golang"],
+    about:
+      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+  },
+  {
+    name: "Mahadi Abuhuraira>",
+    role: "Head of Development/CTO",
+    imageUrl: "/person_two.png",
+    socials: [],
+    skills: ["Compact", "FullStack", "Golang"],
+    about:
+      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+  },
 ];

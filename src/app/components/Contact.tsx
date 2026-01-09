@@ -7,7 +7,7 @@ const Contact = () => {
   const { isDark } = useTheme();
 
   return (
-    <section className="section bg-hero-bg">
+    <section id="contact" className="section bg-hero-bg">
       <Image
         src={`${isDark ? "/herofaint.png" : "/herofaintlight.png"}`}
         alt="faint_background"

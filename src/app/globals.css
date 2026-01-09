@@ -8,6 +8,10 @@
   --hero-bg: #f9f0f2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: Extended;
   font-style: normal;
