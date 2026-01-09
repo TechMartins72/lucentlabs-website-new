@@ -12,8 +12,8 @@ const HeroSection = () => {
         src={`${isDark ? "/herofaint.png" : "/herofaintlight.png"}`}
         alt="faint_background"
         height={25}
-        width={500}
-        className="absolute top-0 left-0 -translate-y-25"
+        width={350}
+        className="absolute top-1/2 -translate-y-1/2 left-0 rotate-y-180"
       />
       <section className="flex-1 place-items-center">
         <p className="font-semibold tracking-widest">Web3 Development Studio</p>

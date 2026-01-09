@@ -42,10 +42,14 @@ html.dark {
   .font-extended {
     font-family: Extended, sans-serif;
   }
+  .section {
+    @apply py-18 flex flex-col justify-center items-center gap-12 w-screen px-12 md:px-24 relative text-center select-none mx-auto;
+  }
 }
 
 body {
-  background: var(--background);
+  background: var(--hero-bg);
   color: var(--foreground);
   font-family: var(--font-montserrat);
+  text-align: center;
 }
