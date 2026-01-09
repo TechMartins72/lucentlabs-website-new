@@ -43,7 +43,7 @@ html.dark {
     font-family: Extended, sans-serif;
   }
   .section {
-    @apply py-18 flex flex-col justify-center items-center gap-12 w-screen px-12 md:px-24 relative text-center select-none mx-auto;
+    @apply py-18 flex flex-col justify-center items-center gap-12 w-full px-12 md:px-24 relative text-center select-none mx-auto;
   }
 }
 
