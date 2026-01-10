@@ -42,14 +42,14 @@ const ProductsAndSolution = () => {
                 alt={p.imageAlt}
                 width={146}
                 height={197}
-                className="max-lg:w-35 max-lg:h-40"
+                className="max-lg:w-30 max-lg:h-25"
               ></Image>
             </div>
             <ul className="flex gap-2 mb-2">
               {p.tags.map((tag, idx) => (
                 <small
                   key={idx}
-                  className="px-2 py-0.5 bg-black rounded-full  mt-4"
+                  className="px-2 py-0.5 bg-black rounded-full mt-4 text-[10px] md:text-sm"
                 >
                   {tag}
                 </small>
