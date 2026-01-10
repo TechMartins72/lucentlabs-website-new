@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="section text-left! text-white! bg-linear-to-br from-[#064cb4] to-[#031054]">
-      <footer className="flex justify-around w-full">
+      <footer className="flex flex-col gap-12 md:flex-row  justify-around w-full">
         <div>
           <Image
             src="/lucentlabs_white.png"

@@ -22,7 +22,7 @@ const Button: React.FC<ButtonData> = ({
         className={`w-fit rounded-bl-full rounded-tr-full py-0.5 px-1 ${outlineColor}`}
       >
         <div
-          className={`w-fit rounded-bl-full rounded-tr-full ${bg} px-10 py-2 font-semibold text-xl ${textColor}`}
+          className={`w-fit rounded-bl-full rounded-tr-full ${bg} px-4 md:px-6 py-2 font-semibold text-md md:text-lg ${textColor}`}
         >
           {value}
         </div>

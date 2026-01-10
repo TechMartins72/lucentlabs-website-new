@@ -28,14 +28,6 @@ html {
   --color-hero-bg: var(--hero-bg);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --hero-bg: #0b191d;
-  }
-} */
-
 html.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
@@ -47,7 +39,10 @@ html.dark {
     font-family: Extended, sans-serif;
   }
   .section {
-    @apply py-18 flex flex-col justify-center items-center gap-12 w-full px-12 md:px-24 relative text-center select-none mx-auto;
+    @apply py-18 flex flex-col justify-center items-center gap-12 w-full px-8 lg:px-18 xl:px-24 relative text-center select-none mx-auto;
+  }
+  .primary-text {
+    @apply text-3xl lg:text-4xl 2xl:text-6xl font-extrabold py-6 2xl:leading-18 xl:leading-10;
   }
 }
 

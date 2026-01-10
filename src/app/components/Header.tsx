@@ -1,12 +1,11 @@
 "use client";
 
+import { MdMenu } from "react-icons/md";
 import Image from "next/image";
 import { links, socials } from "../utils/index";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import Link from "next/link";
-import { ModeType } from "../utils/types";
-import { useContext } from "react";
-import { ThemeContext, useTheme } from "../providers/ThemeProvider";
+import { useTheme } from "../providers/ThemeProvider";
 import Button from "./Button";
 
 const Header = () => {
@@ -14,29 +13,32 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-20 h-24 bg-background flex justify-center items-center px-24 w-full border-b-2 ${
+      className={`fixed top-0 left-0 z-20 h-24 bg-background flex justify-center items-center px-8 lg:px-18 xl:px-24 w-full border-b-2 ${
         isDark ? "border-blue-light" : "border-[#cdc6c7]"
       } select-none`}
     >
-      <header className="flex justify-center items-center w-full gap-16">
-        <Image
-          src={
-            isDark
-              ? "/lucentlab_vector_dark.png"
-              : "/lucentlab_vector_light.png"
-          }
-          alt="lucentlabs-logo"
-          width={230}
-          height={27}
-        />
-        <ul className="flex flex-1 gap-10 justify-center items-center list-none">
+      <header className="flex justify-between items-center w-full md:gap-8 gap-4">
+        <Link href="#hero-section" className="flex-1 xl:flex-none">
+          <Image
+            src={
+              isDark
+                ? "/lucentlab_vector_dark.png"
+                : "/lucentlab_vector_light.png"
+            }
+            alt="lucentlabs-logo"
+            width={230}
+            height={27}
+            className="cursor-pointer"
+          />
+        </Link>
+        <ul className="hidden xl:flex flex-1 gap-5 2xl:gap-12 justify-center items-center list-none">
           {links.map((link, idx) => (
             <Link key={idx} href={link.url}>
               {link.title}
             </Link>
           ))}
         </ul>
-        <div className="relative flex items-center justify-around border-2 border-blue-light rounded-xl h-12 w-16 bg-white text-black overflow-hidden cursor-pointer">
+        <div className="relative flex items-center justify-around border-2 border-blue-light rounded-xl h-10 w-12 md:h-12 md:w-16 bg-white text-black overflow-hidden cursor-pointer">
           <div
             className={`absolute w-1/2 h-full top-0 ${
               isDark ? "left-0 rounded-r-md" : "right-0 rounded-l-md"
@@ -49,7 +51,7 @@ const Header = () => {
                 isDark ? "text-white" : "text-blue-dark"
               }`}
             >
-              <MdDarkMode />
+              <MdDarkMode className="md:text-xl text-sm" />
             </span>
             <span
               onClick={() => toggleTheme()}
@@ -57,11 +59,11 @@ const Header = () => {
                 !isDark ? "text-white" : "text-blue-dark"
               }`}
             >
-              <MdLightMode />
+              <MdLightMode className="md:text-xl text-sm" />
             </span>
           </div>
         </div>
-        <div className="flex gap-4 text-2xl list-none">
+        <div className="hidden lg:flex gap-4 text-2xl list-none">
           {socials.map((social, idx) => (
             <span
               key={idx}
@@ -75,13 +77,16 @@ const Header = () => {
             </span>
           ))}
         </div>
-        <Button
-          value="Contact Us"
-          href="#"
-          bg="bg-blue-light"
-          outlineColor="bg-linear-to-r/srgb from-white to-transparent"
-          textColor="text-white"
-        />
+        <div className="hidden lg:flex">
+          <Button
+            value="Contact Us"
+            href="#"
+            bg="bg-blue-light"
+            outlineColor="bg-linear-to-r/srgb from-white to-transparent"
+            textColor="text-white"
+          />
+        </div>
+        <MdMenu className="text-4xl lg:hidden cursor-pointer" />
       </header>
     </div>
   );

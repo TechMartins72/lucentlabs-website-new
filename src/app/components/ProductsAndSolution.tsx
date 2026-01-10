@@ -24,22 +24,25 @@ const ProductsAndSolution = () => {
         textColor="text-blue-light"
       />
 
-      <div className="grid grid-cols-2 max-w-280 gap-6 text-white">
+      <div className="grid lg:grid-cols-2 max-w-280 gap-6 text-white">
         {productsAndSolutionsData.map((p, idx) => (
           <div
             key={idx}
-            className={`${p.bg} flex flex-col gap-2 justify-between items-start px-10 py-10 w-full rounded-4xl text-white}`}
+            className={`${p.bg} flex flex-col gap-2 justify-between items-start px-10 py-10 w-full rounded-4xl text-white} md:max-w-150`}
           >
-            <div className="flex gap-3 text-left">
+            <div className="flex max-sm:gap1 gap-3 text-left">
               <div>
-                <h3 className="font-extended text-2xl mb-2">{p.title}</h3>
-                <p className="font-semibold">{p.desc}</p>
+                <h3 className="font-extended text-xl md:text-2xl mb-2">
+                  {p.title}
+                </h3>
+                <p className="font-semibold text-md">{p.desc}</p>
               </div>
               <Image
                 src={p.imageUrl}
                 alt={p.imageAlt}
                 width={146}
                 height={197}
+                className="max-lg:w-35 max-lg:h-40"
               ></Image>
             </div>
             <ul className="flex gap-2 mb-2">

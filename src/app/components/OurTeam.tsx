@@ -14,7 +14,7 @@ const OurTeam = () => {
         title="Meet Our Team"
         textColor={`${isDark ? "text-blue-light" : "text-blue-dark"}`}
       />
-      <main>
+      <main className="w-full" >
         <ImageFrame />
       </main>
     </section>

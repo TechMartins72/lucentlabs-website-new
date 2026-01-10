@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <div
       id="hero-section"
-      className="bg-hero-bg w-full pb-18 pt-42 px-24 flex justify-center items-center gap-32 relative text-center select-none"
+      className="bg-hero-bg w-full pb-18 pt-42 px-8 lg:px-18 xl:px-24 flex flex-col lg:flex-row justify-center items-center lg:gap-18 xl:gap-20 2xl:gap-28 relative text-center select-none"
     >
       <Image
         src={`${isDark ? "/herofaint.png" : "/herofaintlight.png"}`}
@@ -19,22 +19,21 @@ const HeroSection = () => {
         className="absolute top-1/2 -translate-y-1/2 left-0 rotate-y-180"
       />
       <section className="flex-1 place-items-center">
-        <p className="font-semibold tracking-widest">Web3 Development Studio</p>
+        <p className="font-semibold tracking-widest text-sm md:text-md">Web3 Development Studio</p>
         <h2
           className={`bg-linear-to-r ${
             isDark
               ? "from-[#066AFF] to-[#87C1F6]"
               : "from-[#066AFF] to-[#0620A2]"
-          } bg-clip-text text-6xl font-extended font-extrabold text-transparent py-6 leading-18`}
+          } bg-clip-text primary-text text-transparent font-extended`}
         >
-          Building the Future <br /> of the Web3 on Cardano <br /> and Midnight
+          Building the Future of the Web3 on Cardano and Midnight
         </h2>
-        <p>
+        <p className="text-sm xl:text-lg">
           <span className="font-semibold">Lucent Labs</span> specializes in
-          developing cutting-edge decentralized applications, <br /> smart
-          contracts, and blockchain solutions. We're committed to advancing the{" "}
+          developing cutting-edge decentralized applications, smart contracts,
+          and blockchain solutions. We're committed to advancing the{" "}
           <span className="font-semibold"> Cardano and Midnight </span>
-          <br />
           ecosystems through innovation and community engagement.
         </p>
         <div className="mt-8">
@@ -53,6 +52,7 @@ const HeroSection = () => {
           alt="image"
           width={577.09}
           height={524.58}
+          className="max-md:w-[450] max-md:h-[400] max-lg:w-[480] max-lg:h-[450] max-xl:w-[500] max-xl:h-[470] max-2xl:w-[530] max-2xl:h-[500]"
         />
       </section>
     </div>

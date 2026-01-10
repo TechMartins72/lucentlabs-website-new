@@ -18,10 +18,10 @@ const Contact = () => {
       <div className="flex justify-center items-center max-w-7xl">
         <div className="text-left font-semibold">
           <p>Well... that is a wrap</p>
-          <h2 className="text-blue-light text-5xl font-extended my-4 leading-14">
+          <h2 className="text-blue-light text-3xl xl:text-4xl 2xl:text-5xl font-extended my-4 2xl:leading-14">
             Ready to get in touch with the best ?{" "}
           </h2>
-          <h4 className="text-2xl">
+          <h4 className="md:text-2xl text-xl">
             Have a project in mind? <br /> Let's discuss how we can help bring
             your Web3 vision to life
           </h4>
@@ -47,6 +47,7 @@ const Contact = () => {
             alt="getintouch_icon"
             width={550}
             height={407}
+            className="hidden md:flex"
           />
         </div>
       </div>

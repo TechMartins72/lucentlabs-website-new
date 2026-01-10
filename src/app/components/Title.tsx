@@ -18,17 +18,19 @@ const Title: React.FC<TitleData> = ({
 }) => {
   return (
     <div className="flex justify-center items-center">
-      <div className="ml-62.5">
-        <h2 className={`${textColor} font-extended text-5xl mb-3`}>{title}</h2>
-        <p className="text-2xl">{details}</p>
+      <div className="lg:ml-62.5">
+        <h2 className={`${textColor} font-extended primary-text max-xl:pb-2!`}>
+          {title}
+        </h2>
+        <p className="2xl:text-2xl text-sm xl:text-lg">{details}</p>
       </div>
       <Image
         src={imageUrl}
         alt={imageAlt}
         width={220}
         height={130}
-        className="-skew-5"
-      ></Image>
+        className="hidden md:flex"
+      />
     </div>
   );
 };

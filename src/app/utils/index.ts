@@ -21,11 +21,11 @@ export const links: Links[] = [
     url: "#services",
   },
   {
-    title: "Our Team",
+    title: "Team",
     url: "#team",
   },
   {
-    title: "Get In Touch",
+    title: "Contact",
     url: "#contact",
   },
 ];
