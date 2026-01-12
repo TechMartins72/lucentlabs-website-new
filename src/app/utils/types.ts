@@ -32,7 +32,7 @@ export type TeamDetails = {
   name: string;
   role: string;
   imageUrl: string;
-  socials: string[];
+  socials: Socials[];
   skills: string[];
   about: string;
 };

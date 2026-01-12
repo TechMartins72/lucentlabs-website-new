@@ -19,7 +19,9 @@ const HeroSection = () => {
         className="absolute top-1/2 -translate-y-1/2 left-0 rotate-y-180"
       />
       <section className="flex-1 place-items-center">
-        <p className="font-semibold tracking-widest text-sm md:text-md">Web3 Development Studio</p>
+        <p className="font-semibold tracking-widest text-sm md:text-md">
+          Web3 Development Studio
+        </p>
         <h2
           className={`bg-linear-to-r ${
             isDark

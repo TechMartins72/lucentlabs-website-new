@@ -119,7 +119,20 @@ export const teamDetails: TeamDetails[] = [
     name: "Lawal Musa Agah",
     role: "Founder & Lead Architect",
     imageUrl: "/person_one.png",
-    socials: [],
+    socials: [
+      {
+        icon: FaTwitter,
+        url: "",
+      },
+      {
+        icon: FaDiscord,
+        url: "",
+      },
+      {
+        icon: FaLinkedin,
+        url: "",
+      },
+    ],
     skills: ["Leadership", "Cardano", "Backend"],
     about:
       "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
@@ -152,7 +165,7 @@ export const teamDetails: TeamDetails[] = [
       "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
   },
   {
-    name: "Mahadi Abuhuraira>",
+    name: "Mahadi Abuhuraira",
     role: "Head of Development/CTO",
     imageUrl: "/person_two.png",
     socials: [],

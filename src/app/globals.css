@@ -41,6 +41,9 @@ html.dark {
   .section {
     @apply py-18 flex flex-col justify-center items-center gap-12 w-full px-8 lg:px-18 xl:px-24 relative text-center select-none mx-auto;
   }
+  .overlay {
+    @apply absolute bottom-0 h-[45%] w-full bg-linear-to-b from-transparent from-0% via-[#8f046c] via-85% to-[#066AFF] to-100%;
+  }
   .primary-text {
     @apply text-3xl lg:text-4xl 2xl:text-6xl font-extrabold py-6 2xl:leading-18 xl:leading-10;
   }
@@ -51,4 +54,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-montserrat);
   text-align: center;
+}
+
+.slant {
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
 }

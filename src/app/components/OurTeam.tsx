@@ -12,9 +12,9 @@ const OurTeam = () => {
         imageUrl="/team.png"
         details="Experienced professionals dedicated to advancing Web3 technology"
         title="Meet Our Team"
-        textColor={`${isDark ? "text-blue-light" : "text-blue-dark"}`}
+        textColor="text-blue-light"
       />
-      <main className="w-full" >
+      <main className="w-full">
         <ImageFrame />
       </main>
     </section>

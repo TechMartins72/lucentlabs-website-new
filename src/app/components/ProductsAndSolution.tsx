@@ -14,7 +14,7 @@ const ProductsAndSolution = () => {
         alt="faint_background"
         height={25}
         width={350}
-        className="absolute top-1/2 -translate-y-1/2 left-0 rotate-y-18"
+        className="absolute top-1/2 -translate-y-1/2 left-0 rotate-y-180"
       />
       <Title
         imageAlt="solution_icon"
