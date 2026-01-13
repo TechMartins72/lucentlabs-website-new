@@ -20,8 +20,8 @@ const AboutUs = () => {
         {aboutData.map((about, idx) => (
           <div
             key={idx}
-            className={`text-black flex flex-col gap-2 md:gap-4 justify-center items-center px-6 md:px-8 lg:px-12 py-6 w-full rounded-4xl ${
-              isDark ? "bg-[#B4DDF7]" : "bg-[#f9f0f2]"
+            className={`text-black flex flex-col gap-2 md:gap-4 justify-center items-center px-6 md:px-8 lg:px-12 py-6 w-full rounded-4xl transition-all duration-200 ${
+              isDark ? "bg-[#deecf5] hover:bg-[#B4DDF7]" : "bg-[#f9f0f2]"
             }`}
           >
             <Image

@@ -5,7 +5,8 @@ import {
   Socials,
   TeamDetails,
 } from "./types";
-import { FaDiscord, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const links: Links[] = [
   {
@@ -32,7 +33,7 @@ export const links: Links[] = [
 
 export const socials: Socials[] = [
   {
-    icon: FaTwitter,
+    icon: FaXTwitter,
     url: "",
   },
   {
@@ -121,7 +122,7 @@ export const teamDetails: TeamDetails[] = [
     imageUrl: "/person_one.png",
     socials: [
       {
-        icon: FaTwitter,
+        icon: FaXTwitter,
         url: "",
       },
       {

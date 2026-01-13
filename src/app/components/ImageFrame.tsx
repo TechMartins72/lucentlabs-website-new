@@ -81,7 +81,7 @@ const ImageFrame = () => {
             <div
               className={`${
                 imageIdx === idx ? "md:w-150 lg:w-175" : "md:w-100 w-75"
-              } md:h-137.5 h-111 relative overflow-hidden rounded-3xl shrink-0 transition-all duration-500 ease-out border border-white/10 shadow-2xl`}
+              } md:h-137.5 h-111 relative overflow-hidden rounded-3xl shrink-0 transition-all duration-500 ease-out border border-white/10`}
             >
               <div className="h-full bg-linear-to-br from-[#2897DB] to-[#F60077] relative">
                 <button
