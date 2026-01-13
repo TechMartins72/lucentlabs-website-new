@@ -111,7 +111,7 @@ const ImageFrame = () => {
                     alt={member.name}
                     fill
                     sizes="(max-width: 768px) 300px, 600px"
-                    className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                    className="object-cover object-top md:grayscale hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
                 <div className="overlay"></div>
@@ -123,10 +123,12 @@ const ImageFrame = () => {
                       : "opacity-100 translate-y-0"
                   } transition-all duration-300 w-full absolute z-50 bottom-0 left-0 flex flex-col items-center p-8 bg-linear-to-t from-black/90 via-black/40 to-transparent`}
                 >
-                  <h4 className="font-bold uppercase text-2xl tracking-tighter">
+                  <h4 className="font-bold uppercase text-xl md:text-2xl tracking-tighter">
                     {member.name}
                   </h4>
-                  <p className="text-[#76EAFF] font-medium">{member.role}</p>
+                  <p className="text-sm md:text-md text-[#76EAFF] font-medium">
+                    {member.role}
+                  </p>
                 </div>
 
                 {/* Expanded Content (Details) */}
@@ -145,7 +147,7 @@ const ImageFrame = () => {
                     {/* Details side */}
                     <div className="w-full md:w-[60%] h-full bg-black/40 backdrop-blur-md p-6 md:p-10 flex flex-col justify-center gap-6 text-left">
                       <div className="space-y-1">
-                        <h4 className="text-3xl font-bold uppercase leading-tight">
+                        <h4 className="text-2xl md:text-3xl font-bold uppercase leading-tight">
                           {member.name}
                         </h4>
                         <p className="text-md text-[#76EAFF] font-semibold">

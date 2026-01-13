@@ -22,7 +22,7 @@ const ProductsAndSolution = () => {
             y: 100,
             scale: 0.9,
             duration: 0.8,
-            delay: index * 0.2,
+            delay: index * 0.1,
             ease: "power3.out",
             scrollTrigger: {
               trigger: card,

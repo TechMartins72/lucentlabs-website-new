@@ -152,7 +152,7 @@ const HeroSection = () => {
             </section>
 
             {/* IMAGE SECTION */}
-            <section ref={imageRef}>
+            <section ref={imageRef} className="h-fit">
               <Image
                 src={"/heroimage.png"}
                 alt="hero_illustration"
