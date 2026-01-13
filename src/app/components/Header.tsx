@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-100 h-24 bg-background flex justify-center items-center px-8 lg:px-18 xl:px-24 w-full border-b-2 ${
+      className={`fixed top-0 left-0 z-100 h-18 md:h-24 bg-background flex justify-center items-center px-8 lg:px-18 xl:px-24 w-full border-b-2 ${
         isDark ? "border-blue-light" : "border-[#cdc6c7]"
       } select-none`}
     >

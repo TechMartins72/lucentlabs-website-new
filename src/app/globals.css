@@ -39,7 +39,7 @@ html.dark {
     font-family: Extended, sans-serif;
   }
   .section {
-    @apply py-18 flex flex-col justify-center items-center gap-12 w-full px-8 lg:px-18 xl:px-24 relative text-center select-none mx-auto;
+    @apply py-12 md:py-18 px-8 lg:px-18 xl:px-24 flex flex-col justify-center items-center gap-12 w-full relative text-center select-none mx-auto;
   }
   .overlay {
     @apply absolute bottom-0 h-[30%] w-full bg-linear-to-b from-transparent from-0% to-[#272424] to-100%;
@@ -55,6 +55,9 @@ html.dark {
   }
   .button {
     @apply hover:scale-x-110 transition-all;
+  }
+  .hero {
+    @apply bg-hero-bg w-full pb-18 pt-24 md:pt-42 px-8 lg:px-18 xl:px-24 flex flex-col lg:flex-row justify-center items-center lg:gap-18 xl:gap-20 2xl:gap-28 relative text-center select-none;
   }
 }
 

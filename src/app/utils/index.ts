@@ -140,7 +140,7 @@ export const teamDetails: TeamDetails[] = [
   {
     name: "Samir Idris",
     role: "Aiken Smart Contract & Full Stack Developer",
-    imageUrl: "/person_two.png",
+    imageUrl: "/samir_image.png",
     socials: [],
     skills: ["Aiken", "Cardano", "Compact", "Backend"],
     about:
@@ -149,7 +149,7 @@ export const teamDetails: TeamDetails[] = [
   {
     name: "Elliot Lucky",
     role: "Compact Smart Contract & Full Stack Developer",
-    imageUrl: "/person_three.png",
+    imageUrl: "/elliot_image.png",
     socials: [],
     skills: ["Compact", "FullStack", "Rust"],
     about:
@@ -158,7 +158,7 @@ export const teamDetails: TeamDetails[] = [
   {
     name: "Joseph Martins",
     role: "Compact Smart Contract & Full Stack Developer",
-    imageUrl: "/person_one.png",
+    imageUrl: "/joseph_image.png",
     socials: [],
     skills: ["Compact", "FullStack", "Golang"],
     about:
