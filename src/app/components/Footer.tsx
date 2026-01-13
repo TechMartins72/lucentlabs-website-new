@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <ul className="list-none flex flex-col gap-2 font-semibold">
           {services.map((service, idx) => (
-            <Link key={idx} href={service.url}>
+            <Link key={idx} href={service.url} className="scale social">
               {service.title}
             </Link>
           ))}
@@ -34,7 +34,7 @@ const Footer = () => {
               >
                 <Link
                   href={social.url}
-                  className="text-xl md:text-2xl"
+                  className="text-xl md:text-2xl social scale"
                   target="_blank"
                 >
                   <social.icon />

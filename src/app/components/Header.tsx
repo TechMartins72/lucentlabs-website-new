@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-20 h-24 bg-background flex justify-center items-center px-8 lg:px-18 xl:px-24 w-full border-b-2 ${
+      className={`fixed top-0 left-0 z-100 h-24 bg-background flex justify-center items-center px-8 lg:px-18 xl:px-24 w-full border-b-2 ${
         isDark ? "border-blue-light" : "border-[#cdc6c7]"
       } select-none`}
     >
@@ -33,7 +33,7 @@ const Header = () => {
         </Link>
         <ul className="hidden xl:flex flex-1 gap-5 2xl:gap-12 justify-center items-center list-none">
           {links.map((link, idx) => (
-            <Link key={idx} href={link.url}>
+            <Link key={idx} href={link.url} className="scale">
               {link.title}
             </Link>
           ))}

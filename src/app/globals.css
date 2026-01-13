@@ -42,10 +42,19 @@ html.dark {
     @apply py-18 flex flex-col justify-center items-center gap-12 w-full px-8 lg:px-18 xl:px-24 relative text-center select-none mx-auto;
   }
   .overlay {
-    @apply absolute bottom-0 h-[45%] w-full bg-linear-to-b from-transparent from-0% via-[#8f046c] via-85% to-[#066AFF] to-100%;
+    @apply absolute bottom-0 h-[30%] w-full bg-linear-to-b from-transparent from-0% to-[#272424] to-100%;
   }
   .primary-text {
     @apply text-3xl lg:text-4xl 2xl:text-6xl font-extrabold py-6 2xl:leading-18 xl:leading-10;
+  }
+  .scale {
+    @apply hover:scale-115 transition-all;
+  }
+  .social {
+    @apply text-white/60 hover:text-[#76EAFF];
+  }
+  .button {
+    @apply hover:scale-x-110 transition-all;
   }
 }
 
