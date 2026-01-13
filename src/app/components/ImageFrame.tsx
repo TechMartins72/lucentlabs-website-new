@@ -14,6 +14,18 @@ import "swiper/css/navigation";
 
 const ImageFrame = () => {
   const [imageIdx, setImageIdx] = useState<number | null>(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setImageIdx(null);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Ref to hold the swiper instance
   const swiperRef = useRef<any>(null);
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -31,13 +43,13 @@ const ImageFrame = () => {
       {/* Custom Navigation Arrows */}
       <button
         ref={prevRef}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-black/40 backdrop-blur-md p-3 rounded-full border border-white/20 hover:bg-[#F60077] transition-all cursor-pointer disabled:opacity-0 hidden md:block"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-black/40 backdrop-blur-md p-3 rounded-full border border-white/20 hover:bg-[#F60077] transition-all cursor-pointer disabled:opacity-0"
       >
         <ChevronLeft size={24} />
       </button>
       <button
         ref={nextRef}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-black/40 backdrop-blur-md p-3 rounded-full border border-white/20 hover:bg-[#F60077] transition-all cursor-pointer disabled:opacity-0 hidden md:block"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-black/40 backdrop-blur-md p-3 rounded-full border border-white/20 hover:bg-[#F60077] transition-all cursor-pointer disabled:opacity-0"
       >
         <ChevronRight size={24} />
       </button>
@@ -49,7 +61,7 @@ const ImageFrame = () => {
         freeMode={true}
         grabCursor={true}
         watchSlidesProgress={true}
-        resistanceRatio={0.5} // Prevents "hard" bounce at the end
+        resistanceRatio={0.5}
         mousewheel={{ forceToAxis: true }}
         navigation={{
           prevEl: prevRef.current,
@@ -62,7 +74,7 @@ const ImageFrame = () => {
           swiper.params.navigation.nextEl = nextRef.current;
         }}
         modules={[FreeMode, Navigation, Mousewheel]}
-        className="mySwiper py-10! !overflow-visible" // Added overflow-visible
+        className="mySwiper py-10! overflow-visible!"
       >
         {teamDetails.map((member, idx) => (
           <SwiperSlide key={idx} className="w-auto!">
@@ -72,11 +84,10 @@ const ImageFrame = () => {
               } md:h-137.5 h-111 relative overflow-hidden rounded-3xl shrink-0 transition-all duration-500 ease-out border border-white/10 shadow-2xl`}
             >
               <div className="h-full bg-linear-to-br from-[#2897DB] to-[#F60077] relative">
-                {/* Modern Toggle Button */}
                 <button
-                  className="absolute top-6 right-6 z-100 bg-black/50 backdrop-blur-xl p-2 rounded-full border border-white/30 hover:scale-110 transition-transform cursor-pointer shadow-lg active:scale-95"
+                  className="invisible md:visible absolute top-6 right-6 z-100 bg-black/50 backdrop-blur-xl p-2 rounded-full border border-white/30 hover:scale-110 transition-transform cursor-pointer shadow-lg active:scale-95"
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent swiper from jumping
+                    e.stopPropagation();
                     setImageIdx(imageIdx === idx ? null : idx);
                   }}
                 >

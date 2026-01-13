@@ -1,4 +1,4 @@
-import Image from "next/image";
+<!-- import Image from "next/image";
 import { teamDetails } from "../utils";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -151,4 +151,4 @@ const ImageFrame = () => {
   );
 };
 
-export default ImageFrame;
+export default ImageFrame; -->
