@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { teamDetails } from "../utils";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
@@ -11,8 +10,9 @@ import { ChevronLeft, ChevronRight, Plus, Minus } from "lucide-react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
+import { TeamDetails } from "../utils/types";
 
-const ImageFrame = () => {
+const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
   const [imageIdx, setImageIdx] = useState<number | null>(0);
 
   useEffect(() => {
@@ -76,7 +76,7 @@ const ImageFrame = () => {
         modules={[FreeMode, Navigation, Mousewheel]}
         className="mySwiper py-10! overflow-visible!"
       >
-        {teamDetails.map((member, idx) => (
+        {details.map((member, idx) => (
           <SwiperSlide key={idx} className="w-auto!">
             <div
               className={`${

@@ -67,7 +67,7 @@ const Header = () => {
           {socials.map((social, idx) => (
             <span
               key={idx}
-              className="p-0.5 bg-linear-to-r/srgb from-white to-transparent rounded-full"
+              className="p-0.5 bg-linear-to-r/srgb from-white hover:from-[#84b5d3] to-transparent rounded-full"
             >
               <span className="flex justify-center items-center p-3 bg-blue-light text-white rounded-full cursor-pointer">
                 <Link href={social.url} className="text-xl" target="_blank">

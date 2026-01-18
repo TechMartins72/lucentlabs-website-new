@@ -39,7 +39,7 @@ const HeroSection = () => {
             y: 40,
             duration: 0.8,
           },
-          "-=0.3"
+          "-=0.3",
         )
         .from(
           descriptionRef.current,
@@ -48,7 +48,7 @@ const HeroSection = () => {
             y: 30,
             duration: 0.7,
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           buttonRef.current,
@@ -58,7 +58,7 @@ const HeroSection = () => {
             duration: 0.6,
             ease: "back.out(1.7)",
           },
-          "-=0.3"
+          "-=0.3",
         )
         .from(
           imageRef.current,
@@ -68,7 +68,7 @@ const HeroSection = () => {
             scale: 0.9,
             duration: 1,
           },
-          "-=0.6"
+          "-=0.6",
         );
 
       // Continuous floating animation for image

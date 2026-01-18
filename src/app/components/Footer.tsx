@@ -7,20 +7,25 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { useTheme } from "../providers/ThemeProvider";
 
 const Footer = () => {
+  const { isDark } = useTheme();
+
   return (
     <div className="text-left! text-white! bg-linear-to-br from-[#064cb4] to-[#031054] overflow-hidden px-8 pt-20 md:pt-20 pb-10">
       <footer className="flex flex-col gap-12 md:flex-row justify-around w-full max-w-7xl mx-auto px-4">
         {/* BRANDING */}
         <div className="flex flex-col gap-4">
-          <Image
-            src="/lucentlabs_white.png"
-            alt="lucentlabs_white_icon"
-            width={203}
-            height={28}
-            className="mb-2"
-          />
+          <Link href="#hero-section" className="flex-1 xl:flex-none">
+            <Image
+              src="/lucentlab_vector_dark.png"
+              alt="lucentlabs-logo"
+              width={230}
+              height={27}
+              className="cursor-pointer"
+            />
+          </Link>
           <small className="opacity-60">
             ©Lucentlabs, Inc. 2025. All Rights Reserved
           </small>

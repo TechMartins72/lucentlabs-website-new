@@ -1,5 +1,5 @@
-import React from "react";
 import Title from "./Title";
+import { teamDetails } from "../utils";
 import { useTheme } from "../providers/ThemeProvider";
 import ImageFrame from "./ImageFrame";
 
@@ -15,7 +15,7 @@ const OurTeam = () => {
         textColor="text-blue-light"
       />
       <main className="w-full">
-        <ImageFrame />
+        <ImageFrame details={teamDetails} />
       </main>
     </section>
   );

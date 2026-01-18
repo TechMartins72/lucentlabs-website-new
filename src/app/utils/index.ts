@@ -115,6 +115,51 @@ export const services = [
   { title: "Our Works", url: "#" },
 ];
 
+export const advisorsDetails: TeamDetails[] = [
+  {
+    name: "Matteo Coppola",
+    role: "Technical Advisor",
+    imageUrl: "/matteo_coppola.png",
+    socials: [
+      {
+        icon: FaXTwitter,
+        url: "",
+      },
+      {
+        icon: FaDiscord,
+        url: "",
+      },
+      {
+        icon: FaLinkedin,
+        url: "",
+      },
+    ],
+    skills: ["Leadership", "Cardano", "Backend"],
+    about: "Founder and CEO at Fluidtoken",
+  },
+  {
+    name: "Raul Rosa",
+    role: "Technical Advisor",
+    imageUrl: "/raul_rosa.png",
+    socials: [
+      {
+        icon: FaXTwitter,
+        url: "",
+      },
+      {
+        icon: FaDiscord,
+        url: "",
+      },
+      {
+        icon: FaLinkedin,
+        url: "",
+      },
+    ],
+    skills: ["Leadership", "Cardano", "Backend"],
+    about: "Co-Founder at Fluidtoken",
+  },
+];
+
 export const teamDetails: TeamDetails[] = [
   {
     name: "Lawal Musa Agah",
@@ -145,7 +190,7 @@ export const teamDetails: TeamDetails[] = [
     socials: [],
     skills: ["Aiken", "Cardano", "Compact", "Backend"],
     about:
-      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+      "I am Samir - An expert in Aiken and functional programming with a focus on secure and efficient smart contracts.",
   },
   {
     name: "Elliot Lucky",
@@ -154,7 +199,7 @@ export const teamDetails: TeamDetails[] = [
     socials: [],
     skills: ["Compact", "FullStack", "Rust"],
     about:
-      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+      "I am Elliot - Expert in Minokawa and Circum with a focus on zkApps.",
   },
   {
     name: "Joseph Martins",
@@ -163,7 +208,7 @@ export const teamDetails: TeamDetails[] = [
     socials: [],
     skills: ["Compact", "FullStack", "Golang"],
     about:
-      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+      "I am Joseph - Expert in Minokawa and functional programming with a focus on private and efficient dApps.",
   },
   {
     name: "Mahadi Abuhuraira",
@@ -172,6 +217,6 @@ export const teamDetails: TeamDetails[] = [
     socials: [],
     skills: ["Compact", "FullStack", "Golang"],
     about:
-      "I'm Lawal, a visionary and Blockchain architect with 8+ years of experience in distributed systems and smart contract development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+      "I'm Mahadi - A full-stack developer specializing in Cardano and Midnight blockchain technologies.",
   },
 ];
