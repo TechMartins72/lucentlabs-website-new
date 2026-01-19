@@ -5,7 +5,8 @@ import {
   Socials,
   TeamDetails,
 } from "./types";
-import { FaDiscord, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 
 export const links: Links[] = [
@@ -37,7 +38,7 @@ export const socials: Socials[] = [
     url: "",
   },
   {
-    icon: FaDiscord,
+    icon: MdEmail,
     url: "",
   },
   {
@@ -126,7 +127,7 @@ export const advisorsDetails: TeamDetails[] = [
         url: "",
       },
       {
-        icon: FaDiscord,
+        icon: MdEmail,
         url: "",
       },
       {
@@ -147,7 +148,7 @@ export const advisorsDetails: TeamDetails[] = [
         url: "",
       },
       {
-        icon: FaDiscord,
+        icon: MdEmail,
         url: "",
       },
       {
@@ -168,15 +169,15 @@ export const teamDetails: TeamDetails[] = [
     socials: [
       {
         icon: FaXTwitter,
-        url: "",
+        url: "https://x.com/musalawal04",
       },
       {
-        icon: FaDiscord,
-        url: "",
+        icon: MdEmail,
+        url: "mailto:musalawal04@gmail.com",
       },
       {
         icon: FaLinkedin,
-        url: "",
+        url: "https://www.linkedin.com/in/musalawal04",
       },
     ],
     skills: ["Leadership", "Cardano", "Backend"],
@@ -187,7 +188,20 @@ export const teamDetails: TeamDetails[] = [
     name: "Samir Idris",
     role: "Aiken Smart Contract & Full Stack Developer",
     imageUrl: "/samir_image.png",
-    socials: [],
+    socials: [
+      {
+        icon: FaXTwitter,
+        url: "https://x.com/scientistsamir",
+      },
+      {
+        icon: MdEmail,
+        url: "mailto:samzidris11@gmail.com",
+      },
+      {
+        icon: FaLinkedin,
+        url: "https://www.linkedin.com/in/scisamir",
+      },
+    ],
     skills: ["Aiken", "Cardano", "Compact", "Backend"],
     about:
       "I am Samir - An expert in Aiken and functional programming with a focus on secure and efficient smart contracts.",
@@ -196,25 +210,64 @@ export const teamDetails: TeamDetails[] = [
     name: "Elliot Lucky",
     role: "Compact Smart Contract & Full Stack Developer",
     imageUrl: "/elliot_image.png",
-    socials: [],
+    socials: [
+      {
+        icon: FaXTwitter,
+        url: "https://x.com/codebigint_01",
+      },
+      {
+        icon: MdEmail,
+        url: "mailto:elliotlucky509@gmail.com",
+      },
+      {
+        icon: FaLinkedin,
+        url: "https://www.linkedin.com/elliot-lucky",
+      },
+    ],
     skills: ["Compact", "FullStack", "Rust"],
     about:
-      "I am Elliot - Expert in Minokawa and Circum with a focus on zkApps.",
+      "I am Elliot - Expert in Compact and Fullstack Developer with a focus on zkApps.",
   },
   {
     name: "Joseph Martins",
     role: "Compact Smart Contract & Full Stack Developer",
     imageUrl: "/joseph_image.png",
-    socials: [],
+    socials: [
+      {
+        icon: FaXTwitter,
+        url: "https://x.com/_martinsjoseph",
+      },
+      {
+        icon: MdEmail,
+        url: "mailto:techmartins72@gmail.com",
+      },
+      {
+        icon: FaLinkedin,
+        url: "https://www.linkedin.com/in/joseph-martins-jb",
+      },
+    ],
     skills: ["Compact", "FullStack", "Golang"],
     about:
-      "I am Joseph - Expert in Minokawa and functional programming with a focus on private and efficient dApps.",
+      "I am Joseph - Expert in Compact and functional programming with a focus on private and efficient dApps.",
   },
   {
     name: "Mahadi Abuhuraira",
     role: "Head of Development/CTO",
     imageUrl: "/person_two.png",
-    socials: [],
+    socials: [
+      {
+        icon: FaXTwitter,
+        url: "",
+      },
+      {
+        icon: MdEmail,
+        url: "",
+      },
+      {
+        icon: FaLinkedin,
+        url: "https://www.linkedin.com/",
+      },
+    ],
     skills: ["Compact", "FullStack", "Golang"],
     about:
       "I'm Mahadi - A full-stack developer specializing in Cardano and Midnight blockchain technologies.",

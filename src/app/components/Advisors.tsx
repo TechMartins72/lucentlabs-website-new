@@ -14,7 +14,6 @@ const Advisors = () => {
         title="Meet Our Advisors"
         textColor="text-blue-light"
       />
-      Co-Founder at Fluidtokens
       <main className="w-full">
         <ImageFrame details={advisorsDetails} />
       </main>

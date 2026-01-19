@@ -17,7 +17,7 @@ const Header = () => {
         isDark ? "border-blue-light" : "border-[#cdc6c7]"
       } select-none`}
     >
-      <header className="flex justify-between items-center w-full md:gap-8 gap-4">
+      <header className="flex justify-between items-center w-full md:gap-8 gap-4 max-w-500 mx-auto">
         <Link href="#hero-section" className="flex-1 xl:flex-none">
           <Image
             src={

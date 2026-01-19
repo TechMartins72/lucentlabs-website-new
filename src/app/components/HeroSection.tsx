@@ -86,7 +86,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div id="hero-section" className="hero overflow-hidden">
+    <div id="hero-section" className="hero overflow-hidden max-w-500 mx-auto">
       <Image
         src={`${isDark ? "/herofaint.png" : "/herofaintlight.png"}`}
         alt="faint_background"

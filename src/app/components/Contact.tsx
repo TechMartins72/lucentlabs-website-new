@@ -39,7 +39,7 @@ const Contact = () => {
             duration: 0.7,
             ease: "power3.out",
           },
-          "-=0.3"
+          "-=0.3",
         )
         .from(
           subHeadingRef.current,
@@ -49,7 +49,7 @@ const Contact = () => {
             duration: 0.6,
             ease: "power2.out",
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           buttonContainerRef.current,
@@ -59,7 +59,7 @@ const Contact = () => {
             duration: 0.5,
             ease: "back.out(1.7)",
           },
-          "-=0.3"
+          "-=0.3",
         )
         .from(
           imageRef.current,
@@ -69,7 +69,7 @@ const Contact = () => {
             duration: 0.8,
             ease: "power3.out",
           },
-          "-=0.6"
+          "-=0.6",
         );
     });
 
