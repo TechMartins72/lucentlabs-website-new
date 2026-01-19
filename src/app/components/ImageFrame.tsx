@@ -39,7 +39,7 @@ const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
   }, [imageIdx]);
 
   return (
-    <main className="relative w-fit text-white group px-4 overflow-hidden max-w-500 mx-auto">
+    <main className="relative w-fit text-white group px-4 overflow-hidden max-w-450 mx-auto">
       {/* Custom Navigation Arrows */}
       <button
         ref={prevRef}

@@ -124,15 +124,11 @@ export const advisorsDetails: TeamDetails[] = [
     socials: [
       {
         icon: FaXTwitter,
-        url: "",
+        url: "https://x.com/oxMetamat",
       },
       {
         icon: MdEmail,
-        url: "",
-      },
-      {
-        icon: FaLinkedin,
-        url: "",
+        url: "mailto:m.coppola.mazzetti@gmail.com",
       },
     ],
     skills: ["Leadership", "Cardano", "Backend"],
@@ -145,15 +141,11 @@ export const advisorsDetails: TeamDetails[] = [
     socials: [
       {
         icon: FaXTwitter,
-        url: "",
+        url: "https://x.com/elraulito",
       },
       {
         icon: MdEmail,
-        url: "",
-      },
-      {
-        icon: FaLinkedin,
-        url: "",
+        url: "mailto:raulR912@gmail.com",
       },
     ],
     skills: ["Leadership", "Cardano", "Backend"],
@@ -165,11 +157,11 @@ export const teamDetails: TeamDetails[] = [
   {
     name: "Lawal Musa Agah",
     role: "Founder & Lead Architect",
-    imageUrl: "/person_one.png",
+    imageUrl: "/lawal_image.png",
     socials: [
       {
         icon: FaXTwitter,
-        url: "https://x.com/musalawal04",
+        url: "https://x.com/ADA_Dolphin04",
       },
       {
         icon: MdEmail,
@@ -253,22 +245,22 @@ export const teamDetails: TeamDetails[] = [
   {
     name: "Mahadi Abuhuraira",
     role: "Head of Development/CTO",
-    imageUrl: "/person_two.png",
+    imageUrl: "/mahadi_image.png",
     socials: [
       {
         icon: FaXTwitter,
-        url: "",
+        url: "https://x.com/mamt4real",
       },
       {
         icon: MdEmail,
-        url: "",
+        url: "mailto:mamt4real@gmail.com",
       },
       {
         icon: FaLinkedin,
-        url: "https://www.linkedin.com/",
+        url: "https://linkedin.com/in/mamt4real",
       },
     ],
-    skills: ["Compact", "FullStack", "Golang"],
+    skills: ["FullStack"],
     about:
       "I'm Mahadi - A full-stack developer specializing in Cardano and Midnight blockchain technologies.",
   },

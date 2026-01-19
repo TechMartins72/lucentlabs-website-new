@@ -39,7 +39,7 @@ html.dark {
     font-family: Extended, sans-serif;
   }
   .section {
-    @apply py-12 md:py-18 px-8 lg:px-18 xl:px-24 flex flex-col justify-center items-center gap-12 w-full relative text-center mx-auto max-w-7xl;
+    @apply py-12 md:py-18 px-8 lg:px-18 xl:px-24 flex flex-col justify-center items-center gap-12 w-full relative text-center mx-auto;
   }
   .overlay {
     @apply absolute bottom-0 h-[30%] w-full bg-linear-to-b from-transparent from-0% to-[#272424] to-100%;
