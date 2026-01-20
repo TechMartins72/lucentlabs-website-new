@@ -15,7 +15,7 @@ const OurTeam = () => {
         textColor="text-blue-light"
       />
       <main className="w-full">
-        {/* <ImageFrame details={teamDetails} /> */}
+        <ImageFrame details={teamDetails} />
       </main>
     </section>
   );
