@@ -107,12 +107,12 @@ const HeroSection = () => {
         className="w-full h-full"
       >
         <SwiperSlide>
-          <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-4 lg:gap-10">
             {/* TEXT CONTENT SECTION */}
             <section className="flex-1 flex flex-col items-center justify-center">
               <p
                 ref={subtitleRef}
-                className="font-semibold tracking-widest text-sm md:text-md opacity-80"
+                className="font-semibold tracking-widest text-xs md:text-md opacity-80"
               >
                 Web3 Development Studio
               </p>
@@ -123,14 +123,14 @@ const HeroSection = () => {
                   isDark
                     ? "from-[#066AFF] to-[#87C1F6]"
                     : "from-[#066AFF] to-[#0620A2]"
-                } bg-clip-text primary-text text-transparent font-extended mt-4`}
+                } bg-clip-text primary-text text-transparent font-extended lg:mt-4`}
               >
                 Building the Future of the Web3 on Cardano and Midnight
               </h2>
 
               <p
                 ref={descriptionRef}
-                className="text-sm xl:text-lg mt-6 max-w-2xl"
+                className="text-sm xl:text-lg lg:mt-6 max-w-2xl"
               >
                 <span className="font-semibold">Lucent Labs</span> specializes
                 in developing cutting-edge decentralized applications, smart

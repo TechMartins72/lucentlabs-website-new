@@ -63,12 +63,12 @@ const ProductsAndSolution = () => {
             }}
             className={`${p.bg} flex flex-col gap-2 justify-between items-start px-10 py-10 w-full rounded-4xl text-white md:max-w-150 hover:scale-103 transition-all duration-300`}
           >
-            <div className="flex max-sm:gap1 gap-3 text-left">
+            <div className="flex max-sm:gap-1 gap-3 text-left">
               <div>
                 <h3 className="font-extended text-xl md:text-2xl mb-2">
                   {p.title}
                 </h3>
-                <p className="font-semibold text-md">{p.desc}</p>
+                <p className="font-semibold text-xs md:text-md">{p.desc}</p>
               </div>
               <Image
                 src={p.imageUrl}
@@ -80,12 +80,12 @@ const ProductsAndSolution = () => {
             </div>
             <ul className="flex gap-2 mb-2">
               {p.tags.map((tag, idx) => (
-                <small
+                <span
                   key={idx}
-                  className="px-2 py-0.5 bg-black rounded-full mt-4 text-[10px] md:text-sm"
+                  className="px-1.5 py-0.5 bg-black rounded-full mt-4 text-[10px] md:text-sm"
                 >
-                  {tag}
-                </small>
+                  <small>{tag}</small>
+                </span>
               ))}
             </ul>
             <Button
