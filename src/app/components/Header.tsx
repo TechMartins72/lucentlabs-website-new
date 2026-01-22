@@ -86,7 +86,7 @@ const Header = () => {
             textColor="text-white"
           />
         </div>
-        <MdMenu className="text-4xl lg:hidden cursor-pointer" />
+        {/* <MdMenu className="text-4xl lg:hidden cursor-pointer" /> */}
       </header>
     </div>
   );
