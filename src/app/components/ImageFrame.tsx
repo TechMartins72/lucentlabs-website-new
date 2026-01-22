@@ -87,9 +87,7 @@ const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
             <SwiperSlide key={idx} className="w-auto!">
               <div
                 className={`${
-                  imageIdx === idx
-                    ? "md:w-150 lg:w-175"
-                    : "w-50 sm:w-[320px] md:w-100"
+                  imageIdx === idx ? "md:w-150 lg:w-175" : "w-70 md:w-100"
                 } h-100 sm:h-112.5 md:h-137.5 relative overflow-hidden rounded-2xl sm:rounded-3xl shrink-0 transition-all duration-500 ease-out border border-white/10 shadow-xl`}
               >
                 <div className="h-full bg-linear-to-br from-[#2897DB] to-[#F60077] relative">
