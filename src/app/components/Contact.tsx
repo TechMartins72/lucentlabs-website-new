@@ -4,6 +4,7 @@ import Button from "./Button";
 import { useTheme } from "../providers/ThemeProvider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,7 +105,7 @@ const Contact = () => {
           >
             <Button
               value="Get in touch with us"
-              href="#"
+              href="mailto:musalawal04@gmail.com"
               bg="bg-blue-light"
               outlineColor="bg-linear-to-r/srgb from-white to-transparent"
               textColor="text-white"

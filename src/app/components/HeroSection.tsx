@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -141,7 +142,7 @@ const HeroSection = () => {
                 <Button
                   value="Build with us"
                   bg={`${isDark ? "bg-[#066AFF4D]" : "bg-[#A6C7FA]"}`}
-                  href="#"
+                  href="mailto:musalawal04@gmail.com"
                   outlineColor="bg-linear-to-r/srgb from-[#18C8CE] to-[#342492]"
                   textColor={`${isDark ? "text-white" : "text-black"}`}
                 />

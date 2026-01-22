@@ -80,7 +80,7 @@ const Header = () => {
         <div className="hidden lg:flex">
           <Button
             value="Contact Us"
-            href="#"
+            href="mailto:musalawal04@gmail.com"
             bg="bg-blue-light"
             outlineColor="bg-linear-to-r/srgb from-white to-transparent"
             textColor="text-white"

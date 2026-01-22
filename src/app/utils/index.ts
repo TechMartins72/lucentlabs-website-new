@@ -35,11 +35,11 @@ export const links: Links[] = [
 export const socials: Socials[] = [
   {
     icon: FaXTwitter,
-    url: "",
+    url: "https://x.com/_Lucentlabs",
   },
   {
     icon: MdEmail,
-    url: "",
+    url: "mailto:musalawal04@gmail.com",
   },
   {
     icon: FaLinkedin,

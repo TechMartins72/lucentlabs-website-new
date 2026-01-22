@@ -44,7 +44,7 @@ const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
 
   return (
     <main className="relative w-full text-white overflow-hidden">
-      <div className="relative max-w-[1800px] mx-auto">
+      <div className="relative max-w-450 mx-auto">
         {/* Custom Navigation Arrows */}
         <button
           ref={prevRef}
@@ -81,20 +81,20 @@ const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
             swiper.params.navigation.nextEl = nextRef.current;
           }}
           modules={[FreeMode, Navigation, Mousewheel]}
-          className="!py-6 sm:!py-8 md:!py-10 !overflow-visible"
+          className="py-6! sm:py-8! md:py-10! overflow-visible!"
         >
           {details.map((member, idx) => (
-            <SwiperSlide key={idx} className="!w-auto">
+            <SwiperSlide key={idx} className="w-auto!">
               <div
                 className={`${
                   imageIdx === idx
-                    ? "md:w-[600px] lg:w-[700px]"
-                    : "w-[280px] sm:w-[320px] md:w-[400px]"
-                } h-[400px] sm:h-[450px] md:h-[550px] relative overflow-hidden rounded-2xl sm:rounded-3xl shrink-0 transition-all duration-500 ease-out border border-white/10 shadow-xl`}
+                    ? "md:w-150 lg:w-175"
+                    : "w-50 sm:w-[320px] md:w-100"
+                } h-100 sm:h-112.5 md:h-137.5 relative overflow-hidden rounded-2xl sm:rounded-3xl shrink-0 transition-all duration-500 ease-out border border-white/10 shadow-xl`}
               >
-                <div className="h-full bg-gradient-to-br from-[#2897DB] to-[#F60077] relative">
+                <div className="h-full bg-linear-to-br from-[#2897DB] to-[#F60077] relative">
                   <button
-                    className="hidden md:block absolute top-4 sm:top-6 right-4 sm:right-6 z-[100] bg-black/50 backdrop-blur-xl p-2 rounded-full border border-white/30 hover:scale-110 transition-transform cursor-pointer shadow-lg active:scale-95"
+                    className="hidden md:block absolute top-4 sm:top-6 right-4 sm:right-6 z-25 bg-black/50 backdrop-blur-xl p-2 rounded-full border border-white/30 hover:scale-110 transition-transform shadow-lg active:scale-95"
                     onClick={(e) => {
                       e.stopPropagation();
                       setImageIdx(imageIdx === idx ? null : idx);
@@ -127,7 +127,7 @@ const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
                   </div>
 
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
 
                   {/* Collapsed Overlay Info */}
                   <div
@@ -135,7 +135,7 @@ const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
                       imageIdx === idx
                         ? "opacity-0 translate-y-10"
                         : "opacity-100 translate-y-0"
-                    } transition-all duration-300 w-full absolute z-50 bottom-0 left-0 flex flex-col items-center p-6 sm:p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent`}
+                    } transition-all duration-300 w-full absolute z-50 bottom-0 left-0 flex flex-col items-center p-6 sm:p-8 bg-linear-to-t from-black/90 via-black/40 to-transparent`}
                   >
                     <h4 className="font-bold uppercase text-lg sm:text-xl md:text-2xl tracking-tight text-center">
                       {member.name}
