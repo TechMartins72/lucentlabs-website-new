@@ -39,11 +39,11 @@ export const socials: Socials[] = [
   },
   {
     icon: MdEmail,
-    url: "mailto:musalawal04@gmail.com",
+    url: "mailto:lucentcodes@gmail.com",
   },
   {
     icon: FaLinkedin,
-    url: "",
+    url: "https://www.linkedin.com/company/luccentlabs/",
   },
 ];
 
