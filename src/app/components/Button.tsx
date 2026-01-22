@@ -17,7 +17,7 @@ const Button: React.FC<ButtonData> = ({
   href,
 }) => {
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <div
         className={`w-fit rounded-bl-full rounded-tr-full py-0.5 px-1 ${outlineColor} button`}
       >

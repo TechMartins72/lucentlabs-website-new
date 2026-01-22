@@ -94,7 +94,7 @@ const ImageFrame = ({ details }: { details: TeamDetails[] }) => {
               >
                 <div className="h-full bg-linear-to-br from-[#2897DB] to-[#F60077] relative">
                   <button
-                    className="hidden md:block absolute top-4 sm:top-6 right-4 sm:right-6 z-25 bg-black/50 backdrop-blur-xl p-2 rounded-full border border-white/30 hover:scale-110 transition-transform shadow-lg active:scale-95"
+                    className="hidden md:block absolute top-4 sm:top-6 right-4 sm:right-6 z-50 bg-black/50 backdrop-blur-xl p-2 rounded-full border border-white/30 hover:scale-110 transition-transform shadow-lg active:scale-95"
                     onClick={(e) => {
                       e.stopPropagation();
                       setImageIdx(imageIdx === idx ? null : idx);
