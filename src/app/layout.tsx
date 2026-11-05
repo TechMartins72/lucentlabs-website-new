@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./providers/ThemeProvider";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Lucent Labs",
+  title: "Lucent Labs — Web3 & DeFi development agency",
   description:
-    "Lucent Labs specializes in developing cutting-edge decentralized applications, smart contracts, and blockchain solutions. We're committed to advancing the Cardano and Midnight ecosystems through innovation and community engagement.",
+    "Lucent Labs builds Web3 applications and decentralized financial protocols across Cardano, Midnight, Nervos CKB, Ethereum, Solana and TRON, transforming bold ideas into impactful blockchain solutions.",
 };
 
 export default function RootLayout({
@@ -22,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <body className={`${montserrat.variable} antialiased`}>{children}</body>
-      </ThemeProvider>
+      <body className={`${dmSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }

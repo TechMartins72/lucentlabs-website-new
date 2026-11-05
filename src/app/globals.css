@@ -1,73 +1,178 @@
 @import "tailwindcss";
 
+/* Lucent Labs brand tokens (Brand & Identity Guidelines, 2026) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --blue-light: #066aff;
-  --blue-dark: #0620a2;
-  --hero-bg: #f9f0f2;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@font-face {
-  font-family: Extended;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/MonumentExtended-Ultrabold.otf") format("opentype");
+  --ink: #201e1e; /* Dark Gray — primary */
+  --ink-2: #2a2727;
+  --ink-3: #343030;
+  --paper: #f7f5f5;
+  --mist: #e1dddd; /* Light Gray */
+  --slate: #545454; /* Gray */
+  --magenta: #e22c92;
+  --azure: #1e9adb;
+  --violet: #6b66b9; /* Blue (secondary) */
+  --orchid: #a649a5; /* Neon Pink (secondary) */
+  --brand-gradient: linear-gradient(110deg, #1e9adb 0%, #6b66b9 45%, #e22c92 100%);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-blue-light: var(--blue-light);
-  --color-blue-dark: var(--blue-dark);
-  --color-hero-bg: var(--hero-bg);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-slate: var(--slate);
+  --color-magenta: var(--magenta);
+  --color-azure: var(--azure);
+  --color-violet: var(--violet);
+  --color-orchid: var(--orchid);
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
-html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --hero-bg: #0b191d;
-}
-
-@layer utilities {
-  .font-extended {
-    font-family: Extended, sans-serif;
-  }
-  .section {
-    @apply py-8 px-8 flex flex-col justify-center items-center gap-12 w-full relative text-center mx-auto;
-  }
-  .overlay {
-    @apply absolute bottom-0 h-[30%] w-full bg-linear-to-b from-transparent from-0% to-[#272424] to-100%;
-  }
-  .primary-text {
-    @apply text-3xl lg:text-4xl 2xl:text-6xl font-extrabold py-3 md:py-6 2xl:leading-18 xl:leading-10;
-  }
-  .scale {
-    @apply hover:scale-115 transition-all;
-  }
-  .social {
-    @apply text-white/60 hover:text-[#76EAFF];
-  }
-  .button {
-    @apply hover:scale-x-110 transition-all;
-  }
-  .hero {
-    @apply bg-hero-bg w-full pb-18 pt-24 md:pt-42 px-8 lg:px-18 xl:px-24 flex flex-col lg:flex-row justify-center items-center lg:gap-18 xl:gap-20 2xl:gap-28 relative text-center select-none;
-  }
+/* Smooth scrolling is handled by GSAP ScrollSmoother (components/SmoothScroll.tsx);
+   native smooth scroll-behavior would fight it. */
+html {
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--hero-bg);
-  color: var(--foreground);
-  font-family: var(--font-montserrat);
-  text-align: center;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.slant {
-  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+::selection {
+  background: var(--magenta);
+  color: #fff;
+}
+
+@layer utilities {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+  .section-y {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  /* Headlines: DM Sans Light, sentence case (brand guide p.15) */
+  .display {
+    @apply font-light tracking-[-0.03em] leading-[1.02];
+  }
+  .heading {
+    @apply font-light tracking-[-0.025em] leading-[1.08] text-4xl md:text-5xl lg:text-6xl;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em];
+  }
+  .text-gradient {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-brand-gradient {
+    background: var(--brand-gradient);
+  }
+  /* Brand pattern — aligned grid of crosses (brand guide p.19). Use sparingly. */
+  .bg-cross {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M26 14h4v12h12v4H30v12h-4V30H14v-4h12z' fill='%23ffffff' fill-opacity='0.045'/%3E%3C/svg%3E");
+  }
+  .bg-cross-dark {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M26 14h4v12h12v4H30v12h-4V30H14v-4h12z' fill='%23201e1e' fill-opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .mask-fade-x {
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+  .mask-fade-b {
+    mask-image: linear-gradient(180deg, #000 40%, transparent);
+  }
+}
+
+/* Buttons */
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 h-12 text-sm font-medium transition-all duration-300 whitespace-nowrap;
+}
+@utility btn-primary {
+  @apply btn text-white;
+  background: var(--brand-gradient);
+  background-size: 160% 100%;
+  background-position: 0% 0%;
+  &:hover {
+    background-position: 100% 0%;
+    box-shadow: 0 10px 30px -10px rgba(226, 44, 146, 0.6);
+  }
+}
+@utility btn-ghost {
+  @apply btn border border-white/20 text-white hover:border-white/60 hover:bg-white/5;
+}
+@utility link-arrow {
+  @apply inline-flex items-center gap-1.5 text-sm font-medium underline-offset-4 hover:underline;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Chains marquee */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Orderbook depth bars */
+@keyframes depth {
+  0%,
+  100% {
+    transform: scaleX(var(--w));
+  }
+  50% {
+    transform: scaleX(calc(var(--w) * 0.82));
+  }
+}
+.depth-bar {
+  transform-origin: right;
+  animation: depth var(--dur, 4s) ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .marquee-track,
+  .depth-bar,
+  .animate-float {
+    animation: none;
+  }
 }

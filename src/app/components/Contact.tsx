@@ -1,131 +1,32 @@
-import Image from "next/image";
-import React, { useEffect, useRef } from "react";
-import Button from "./Button";
-import { useTheme } from "../providers/ThemeProvider";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-
-gsap.registerPlugin(ScrollTrigger);
+import { ArrowUpRight } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import Reveal from "./Reveal";
+import { CONTACT_EMAIL, X_URL } from "../utils";
 
 const Contact = () => {
-  const { isDark } = useTheme();
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const subHeadingRef = useRef<HTMLHeadingElement>(null);
-  const buttonContainerRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 95%",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      tl.from(textRef.current, {
-        opacity: 0,
-        x: -50,
-        duration: 0.6,
-        ease: "power3.out",
-      })
-        .from(
-          headingRef.current,
-          {
-            opacity: 0,
-            y: 30,
-            duration: 0.7,
-            ease: "power3.out",
-          },
-          "-=0.3",
-        )
-        .from(
-          subHeadingRef.current,
-          {
-            opacity: 0,
-            y: 20,
-            duration: 0.6,
-            ease: "power2.out",
-          },
-          "-=0.4",
-        )
-        .from(
-          buttonContainerRef.current,
-          {
-            opacity: 0,
-            scale: 0.8,
-            duration: 0.5,
-            ease: "back.out(1.7)",
-          },
-          "-=0.3",
-        )
-        .from(
-          imageRef.current,
-          {
-            opacity: 0,
-            x: 100,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-          "-=0.6",
-        );
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section id="contact" className="section bg-hero-bg">
-      <Image
-        src={`${isDark ? "/herofaint.png" : "/herofaintlight.png"}`}
-        alt="faint_background"
-        height={25}
-        width={350}
-        className="absolute top-1/2 -translate-y-1/2 right-0"
-      />
-      <div className="flex justify-center items-center max-w-7xl">
-        <div className="text-left font-semibold">
-          <p ref={textRef}>Well... that is a wrap</p>
-          <h2
-            ref={headingRef}
-            className="text-blue-light text-3xl xl:text-4xl 2xl:text-5xl font-extended my-4 2xl:leading-14"
-          >
-            Ready to get in touch with the best ?{" "}
-          </h2>
-          <h4 ref={subHeadingRef} className="md:text-2xl text-xl">
-            Have a project in mind? <br /> Let's discuss how we can help bring
-            your Web3 vision to life
-          </h4>
-          <div
-            ref={buttonContainerRef}
-            className="flex gap-8 justify-center items-center w-fit mt-4"
-          >
-            <Button
-              value="Get in touch with us"
-              href="mailto:musalawal04@gmail.com"
-              bg="bg-blue-light"
-              outlineColor="bg-linear-to-r/srgb from-white to-transparent"
-              textColor="text-white"
-            />
-            <Image
-              src="/pointer.png"
-              alt="pointer_icon"
-              width={26}
-              height={35}
-            />
-          </div>
-        </div>
-        <div ref={imageRef}>
-          <Image
-            src="/getintouch.png"
-            alt="getintouch_icon"
-            width={550}
-            height={407}
-            className="hidden md:flex"
-          />
+    <section id="contact" className="bg-paper px-3 pb-3 sm:px-5 sm:pb-5">
+      <div className="relative overflow-hidden rounded-[2rem] bg-ink" data-fx="scale-in">
+        <div className="absolute inset-0 bg-brand-gradient opacity-90" aria-hidden />
+        <div className="bg-cross absolute inset-0" aria-hidden />
+        <div className="container-x relative py-20 md:py-28">
+          <Reveal className="max-w-4xl">
+            <p className="eyebrow text-white/80">Let&apos;s build</p>
+            <h2 className="display mt-6 text-5xl md:text-7xl lg:text-8xl">Have a project in mind?</h2>
+            <p className="mt-6 max-w-xl text-lg text-white/85">
+              Tell us what you&apos;re building and let&apos;s discuss how we can bring your Web3 vision to life.
+            </p>
+          </Reveal>
+          <Reveal delay={150} className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link href={`mailto:${CONTACT_EMAIL}`} className="btn h-14 bg-white px-8 text-base text-ink hover:bg-ink hover:text-white">
+              Start a project <ArrowUpRight size={18} />
+            </Link>
+            <Link href={X_URL} target="_blank" rel="noopener noreferrer" className="btn h-14 border border-white/40 px-8 text-base hover:bg-white/10">
+              <FaXTwitter /> DM us on X
+            </Link>
+            <span className="text-sm text-white/80 sm:ml-4">or write to {CONTACT_EMAIL}</span>
+          </Reveal>
         </div>
       </div>
     </section>

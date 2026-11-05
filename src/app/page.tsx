@@ -1,28 +1,34 @@
-"use client";
-
-import React from "react";
 import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
+import SmoothScroll from "./components/SmoothScroll";
+import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
-import ProductsAndSolution from "./components/ProductsAndSolution";
+import Orderbook from "./components/Orderbook";
+import Expertise from "./components/Expertise";
 import OurTeam from "./components/OurTeam";
+// Testimonials is parked until real client comments are in — swap it back in for <HowWeWork /> or alongside it.
+import HowWeWork from "./components/HowWeWork";
+import Faq from "./components/Faq";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Advisors from "./components/Advisors";
 
 export default function Home() {
-  const [isDark, setIsDark] = React.useState<boolean>(true);
-
   return (
-    <main className={`${isDark && "dark"} relative`}>
+    <>
+      {/* Fixed header must live outside the smooth-scroll wrapper. */}
       <Header />
-      <HeroSection />
-      <AboutUs />
-      <ProductsAndSolution />
-      <OurTeam />
-      <Advisors />
-      <Contact />
-      <Footer />
-    </main>
+      <SmoothScroll>
+        <main>
+          <Hero />
+          <AboutUs />
+          <Orderbook />
+          <Expertise />
+          <OurTeam />
+          <HowWeWork />
+          <Faq />
+          <Contact />
+        </main>
+        <Footer />
+      </SmoothScroll>
+    </>
   );
 }

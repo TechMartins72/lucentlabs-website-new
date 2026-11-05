@@ -1,94 +1,67 @@
-import React from "react";
-import { links, socials } from "../utils"; // Updated to use your links data
-import Link from "next/link";
 import Image from "next/image";
-
-// Swiper Imports
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import { useTheme } from "../providers/ThemeProvider";
+import Link from "next/link";
+import { chains, links, socials } from "../utils";
 
 const Footer = () => {
-  const { isDark } = useTheme();
-
   return (
-    <div className="text-left! text-white! bg-linear-to-br from-[#064cb4] to-[#031054] overflow-hidden px-8 pt-20 md:pt-20 pb-10">
-      <footer className="flex flex-col gap-12 md:flex-row justify-around w-full max-w-7xl mx-auto px-4">
-        {/* BRANDING */}
-        <div className="flex flex-col gap-4">
-          <Link href="#hero-section" className="flex-1 xl:flex-none">
-            <Image
-              src="/lucentlab_vector_dark.png"
-              alt="lucentlabs-logo"
-              width={230}
-              height={27}
-              className="cursor-pointer"
-            />
-          </Link>
-          <small className="opacity-60">
-            ©Lucentlabs, Inc. 2025. All Rights Reserved
-          </small>
-        </div>
-
-        {/* SOCIALS */}
-        <div>
-          <p className="font-semibold mb-4">Let’s stay in Loop</p>
-          <div className="flex gap-4 list-none mt-2">
-            {socials.map((social, idx) => (
-              <Link
-                key={idx}
-                href={social.url}
-                className="w-10 h-10 flex justify-center items-center bg-white/10 rounded-full hover:bg-[#066AFF] hover:scale-110 transition-all duration-300"
-                target="_blank"
-              >
-                <social.icon size={20} />
-              </Link>
-            ))}
+    <footer className="bg-ink pt-20">
+      <div className="container-x">
+        <div className="grid gap-12 border-b border-white/10 pb-14 md:grid-cols-[1.4fr_1fr_1fr]">
+          <div>
+            <Image src="/lucentlab_vector_dark.png" alt="Lucent Labs" width={210} height={26} />
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/50">
+              Lucent Labs builds Web3 applications and decentralized financial protocols, transforming bold ideas
+              into impactful blockchain solutions.
+            </p>
+            <div className="mt-6 flex gap-2">
+              {socials.map((s) => (
+                <Link
+                  key={s.url}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/70 transition hover:border-magenta hover:text-magenta"
+                >
+                  <s.icon />
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35">Navigate</p>
+            <ul className="mt-5 space-y-3">
+              {links.map((l) => (
+                <li key={l.url}>
+                  <Link href={l.url} className="text-sm text-white/70 transition hover:text-white">
+                    {l.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35">Ecosystems</p>
+            <ul className="mt-5 space-y-3">
+              {chains.map((c) => (
+                <li key={c} className="text-sm text-white/70">
+                  {c}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </footer>
-
-      {/* --- INFINITE NAVIGATION TICKER --- */}
-      <div className="hidden md:block mt-20 border-t border-white/10 pt-10">
-        <Swiper
-          slidesPerView="auto"
-          loop={true}
-          speed={10000}
-          allowTouchMove={true}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          modules={[Autoplay]}
-          className="infinite-ticker"
-        >
-          {[...links, ...links, ...links].map((link, idx) => (
-            <SwiperSlide key={idx} className="w-auto! px-12">
-              <Link
-                href={link.url}
-                className="cursor-pointer text-white/20 font-extended uppercase text-3xl md:text-5xl whitespace-nowrap tracking-tighter hover:text-[#76EAFF] hover:opacity-100 transition-all duration-300 block"
-              >
-                {link.title} <span className="ml-12 text-[#76EAFF]/20">•</span>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="flex flex-col gap-3 py-8 text-xs text-white/40 sm:flex-row sm:justify-between">
+          <p>© {new Date().getFullYear()} Lucent Labs. All rights reserved.</p>
+          <p>Building the future of decentralized finance.</p>
+        </div>
       </div>
-
-      <style jsx global>{`
-        .infinite-ticker .swiper-wrapper {
-          transition-timing-function: linear !important;
-          display: flex;
-          align-items: center;
-        }
-        /* Smooth scrolling for the anchor links */
-        html {
-          scroll-behavior: smooth;
-        }
-      `}</style>
-    </div>
+      <div className="overflow-hidden" aria-hidden>
+        <p data-fx="rise" className="text-gradient select-none text-center text-[19vw] font-semibold leading-[0.8] tracking-[-0.06em] opacity-90">
+          lucent labs
+        </p>
+      </div>
+    </footer>
   );
 };
 

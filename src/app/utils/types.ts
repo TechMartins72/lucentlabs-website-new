@@ -8,24 +8,7 @@ export type Links = {
 export type Socials = {
   icon: IconType;
   url: string;
-};
-
-export type ModeType = "dark" | "light";
-
-export type aboutType = {
-  imageUrl: string;
-  imageAlt: string;
-  title: string;
-  desc: string;
-};
-
-export type ProductsAndSolutionsType = {
-  title: string;
-  desc: string;
-  bg: string;
-  tags: string[];
-  imageUrl: string;
-  imageAlt: string;
+  label: string;
 };
 
 export type TeamDetails = {
@@ -35,4 +18,22 @@ export type TeamDetails = {
   socials: Socials[];
   skills: string[];
   about: string;
+};
+
+export type Expertise = {
+  id: string;
+  title: string;
+  summary: string;
+  items: string[];
+};
+
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+};
+
+export type Faq = {
+  q: string;
+  a: string;
 };
