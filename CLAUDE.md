@@ -3,7 +3,8 @@
 Marketing site for **Lucent Labs**, a Web3 development agency that builds DeFi applications and
 blockchain-based financial protocols. Single-page Next.js site; all sections live on `/`.
 
-- Repo: `github.com/statera-protocol/lucent-labs-website` (branch `main`, pushed directly — no PR flow so far)
+- Repo: `github.com/TechMartins72/lucentlabs-website-new` (`origin`, branch `main`, pushed directly —
+  no PR flow so far). Earlier history was pushed to `github.com/statera-protocol/lucent-labs-website`.
 - Live contact: `lucentcodes@gmail.com` · X: https://x.com/_Lucentlabs · LinkedIn: https://www.linkedin.com/company/luccentlabs/
 - Leader / founder: **Lawal Musa Agah** — Founder & Lead Architect
 
